@@ -1,0 +1,30 @@
+.services-list {
+  position: absolute;
+  top: 356px;
+  left: 124px;
+
+  max-width: 113px;
+
+  @include pm-zero();
+
+  font-size: 14px;
+  text-align: right;
+  line-height: 21px;
+  color: white;
+
+  list-style: none;
+}
+
+@media (max-width: $table-width) {
+  .services-list {
+    top: 268px;
+    left: 47px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .services-list {
+    top: 233px;
+    left: 16px;
+  }
+}

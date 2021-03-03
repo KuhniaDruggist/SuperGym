@@ -1,0 +1,44 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include pm-zero();
+  margin-left: auto;
+
+  list-style: none;
+
+  &__item {
+    margin-left: 20px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(26px, 700, 26px);
+    letter-spacing: 0.03em;
+
+    & .contacts__link:hover,
+    & .contacts__link:focus {
+      opacity: 0.7;
+    }
+
+    & .contacts__link:active {
+      color: $text-active;
+    }
+  }
+}
+
+@media (max-width: $table-width) {
+  .contacts {
+    &__item {
+      font-size: 24px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts {
+    &__item {
+      font-size: 20px;
+    }
+  }
+}

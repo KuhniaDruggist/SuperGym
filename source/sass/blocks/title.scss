@@ -1,0 +1,67 @@
+.title {
+  width: 300px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+
+  &__name {
+    @include pm-zero();
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(109px, 700, 109px);
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-main;
+    -webkit-text-stroke: 3px;
+  }
+
+  &__location {
+    @include pm-zero();
+    margin-right: 1px;
+    margin-bottom: 4px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(49px, 400, 49px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-main;
+  }
+}
+
+@media (max-width: $table-width) {
+  .title {
+    &__name {
+      font-size: 86px;
+      line-height: 86px;
+    }
+
+    &__location {
+      margin-right: 0;
+      margin-bottom: 0;
+
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .title {
+    width: 100%;
+
+    &__name {
+      min-height: 156px;
+      font-size: 78px;
+      line-height: 78px;
+    }
+
+    &__location {
+      margin-bottom: 5px;
+
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+}

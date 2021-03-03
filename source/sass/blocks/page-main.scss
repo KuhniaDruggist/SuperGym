@@ -1,0 +1,106 @@
+.page-main {
+  &__background {
+    background: $conic-gradient-desktop;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include container(1160px, 103px);
+    padding-top: 168px;
+
+    @include bg-img("../img/background-header-desktop@1x.jpg");
+    background-position: 563px 51px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-header-desktop@2x.jpg");
+      background-size: 500px auto;
+    }
+  }
+
+  &__title {
+    margin-left: 96px;
+    margin-bottom: 64px;
+  }
+
+  &__button {
+    @include button();
+    cursor: pointer;
+    margin-bottom: 94px;
+    margin-left: 163px;
+
+    &:hover,
+    &:focus {
+      background: $linear-gradient;
+    }
+
+    &:active {
+      background: $btn-bg-active;
+      border-color: $btn-border-active;
+    }
+  }
+}
+
+@media (max-width: $table-width) {
+  .page-main {
+    &__background {
+      background: $conic-gradient-tablet;
+    }
+
+    &__wrapper {
+      padding-top: 135px;
+      padding-right: 45px;
+      padding-left: 45px;
+
+      @include bg-img("../img/background-header-tablet@1x.jpg");
+      background-position: calc(50% + 177px) 82px;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/background-header-tablet@2x.jpg");
+        background-size: 324px auto;
+      }
+    }
+
+    &__title {
+      margin-left: 24px;
+      margin-bottom: 47px;
+    }
+
+    &__button {
+      width: 187px;
+      margin-bottom: 105px;
+      margin-left: 139px;
+      padding-left: 31px;
+      padding-right: 31px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-main {
+    &__background {
+      background: $conic-gradient-mobile;
+    }
+
+    &__wrapper {
+      padding-top: 112px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      background-image: none;
+    }
+
+    &__title {
+      margin-left: 0;
+      margin-bottom: 49px;
+    }
+
+    &__button {
+      width: 100%;
+      padding-top: 21px;
+      margin-bottom: 78px;
+      padding-bottom: 20px;
+      margin-left: 0;
+    }
+  }
+}
