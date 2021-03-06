@@ -1,4 +1,5 @@
 $text-main: #ffffff;
+$text-content: #102654;
 $text-active: #020020;
 $border-main: #ffffff;
 
@@ -9,4 +10,5 @@ $conic-gradient-desktop: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027
 $conic-gradient-tablet: conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $conic-gradient-mobile: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 
-$linear-gradient: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+$lin-grad-btn-hover: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+$lin-grad-btn-play: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
