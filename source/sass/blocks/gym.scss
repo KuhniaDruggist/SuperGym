@@ -1,0 +1,148 @@
+.gym {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  @include bg-img("../img/background-gym-desktop@1x.jpg");
+  background-position: top 120px right 0;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-gym-desktop@2x.jpg");
+    background-size: 660px auto;
+  }
+
+  &__title {
+    @include pm-zero();
+    margin-bottom: 13px;
+    margin-left: 60px;
+    padding-top: 164px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(49px, 700, 49px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-content;
+  }
+
+  &__subtitle {
+    @include pm-zero();
+    margin-bottom: 42px;
+    margin-left: 60px;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-content;
+  }
+
+  &__description {
+    max-width: 355px;
+
+    @include pm-zero();
+    margin-left: 60px;
+
+    line-height: 24px;
+    color: $text-content;
+
+    &--none {
+      margin-top: 8px;
+    }
+  }
+
+  &__video-box {
+    position: relative;
+    top: -82px;
+    left: 437px;
+  }
+}
+
+@media (max-width: $table-width) {
+  .gym {
+    width: 678px;
+    padding-right: 45px;
+    padding-left: 45px;
+
+    @include bg-img("../img/background-gym-tablet@1x.jpg");
+    background-position: top 326px left 50%;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-gym-tablet@2x.jpg");
+      background-size: 678px auto;
+    }
+
+    &__title {
+      width: 277px;
+      margin-right: auto;
+      margin-bottom: 15px;
+      margin-left: auto;
+      padding-top: 95px;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    &__subtitle {
+      width: 279px;
+      margin-right: auto;
+      margin-bottom: 37px;
+      margin-left: auto;
+    }
+
+    &__description {
+      max-width: 502px;
+      margin-right: auto;
+      margin-bottom: 304px;
+      margin-left: auto;
+      text-align: center;
+
+      &--none {
+        display: none;
+      }
+    }
+
+    &__video-box {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .gym {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+
+    @include bg-img("../img/background-gym-mobile@1x.jpg");
+    background-position: top 335px left 50%;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-gym-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+
+    &__title {
+      width: 211px;
+      margin-bottom: 10px;
+      margin-left: 15px;
+      padding-top: 67px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    &__subtitle {
+      margin-bottom: 27px;
+      margin-left: 15px;
+    }
+
+    &__description {
+      max-width: 100%;
+      min-height: 130px;
+      margin-bottom: 386px;
+      margin-left: 15px;
+      padding-right: 42px;
+      text-align: left;
+    }
+  }
+}
