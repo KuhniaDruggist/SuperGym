@@ -1,10 +1,11 @@
 .video-box {
   width: 364px;
-  height: auto;
+  min-height: 228px;
+  margin-bottom: 32px;
 
   &__video {
     width: 364px;
-    height: auto;
+    min-height: 228px;
 
     @include bg-img("../img/preview-video-desktop@1x.jpg");
     background-position: 0 0;
@@ -17,7 +18,7 @@
 
   &__button {
     position: absolute;
-    top: calc(50% - 36px);
+    top: calc(50% - 39px);
     left: calc(50% - 36px);
 
     width: 72px;
@@ -56,6 +57,7 @@
 
     &:hover,
     &:focus {
+      outline: none;
       background: $text-content;
     }
 
@@ -69,7 +71,7 @@
   .video-box {
     width: 266px;
     margin-right: auto;
-    margin-bottom: 100px;
+    margin-bottom: 33px;
     margin-left: auto;
 
     &__video {
@@ -84,8 +86,8 @@
       }
     }
 
-    &__button-play {
-      top: calc(50% - 27px);
+    &__button {
+      top: calc(50% - 60px);
       left: calc(50% - 27px);
 
       width: 52px;
@@ -113,7 +115,7 @@
 @media (max-width: $mobile-width) {
   .video-box {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 3px;
     margin-left: 0;
 
     &__video {
@@ -128,7 +130,7 @@
       }
     }
 
-    &__button-play {
+    &__button {
       left: calc(50% - 25px);
     }
   }
