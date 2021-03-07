@@ -1,0 +1,82 @@
+.season-tickets {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $bg-color;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: -68px;
+    right: 0;
+
+    width: 287px;
+    height: 411px;
+
+    @include bg-img("../img/background-subs-desktop@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-subs-desktop@2x.png");
+      background-size: 445px auto;
+    }
+  }
+
+  &__title {
+    @include pm-zero();
+    margin-right: auto;
+    margin-bottom: 37px;
+    margin-left: auto;
+    padding-top: 115px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(49px, 700, 49px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-content;
+  }
+}
+
+@media (max-width: $table-width) {
+  .season-tickets {
+    &::before {
+      bottom: -92px;
+
+      width: 347px;
+
+      @include bg-img("../img/background-subs-tablet@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/background-subs-desktop@2x.png");
+        background-size: 406px auto;
+      }
+    }
+
+    &__title {
+      margin-bottom: 31px;
+      padding-top: 95px;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .season-tickets {
+    &::before {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 21px;
+      padding-top: 66px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}

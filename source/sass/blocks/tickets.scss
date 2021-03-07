@@ -1,0 +1,271 @@
+.tickets {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include pm-zero();
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 7.54%;
+  padding-bottom: 80px;
+  padding-left: 7.54%;
+
+  list-style: none;
+
+  &__item {
+    position: relative;
+    z-index: 1;
+
+    box-sizing: border-box;
+    width: 360px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    background-color: $bg-ticket;
+
+    &::after {
+      content: "";
+
+      display: none;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      z-index: -2;
+
+      width: 346px;
+      min-height: calc(100% - 14px);
+
+      background-color: $bg-ticket;
+    }
+
+    &:hover,
+    &:focus-within {
+      outline: none;
+      background: $lin-grad-btn-hover;
+    }
+
+    &:hover::after,
+    &:focus-within::after {
+      display: block;
+    }
+  }
+
+  &__title {
+    width: 150px;
+
+    @include pm-zero();
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    padding-top: 66px;
+
+    font-size: 26px;
+    color: $text-content;
+    text-align: center;
+  }
+
+  &__description {
+    width: 98px;
+
+    @include pm-zero();
+    margin-right: auto;
+    margin-bottom: 66px;
+    margin-left: auto;
+
+    font-weight: 400;
+    color: $text-tickets-desc;
+    text-align: center;
+  }
+
+  &__price {
+    position: relative;
+
+    width: 122px;
+
+    @include pm-zero();
+    padding-right: 62px;
+    margin-bottom: 34px;
+    margin-left: 97px;
+
+    @include font(60px, 700, 90px);
+    color: $text-price;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -24px;
+      left: -18px;
+      z-index: -1;
+
+      width: 192px;
+      height: 73px;
+
+      font-size: 100px;
+      font-weight: 700;
+      color: $text-price-shadow;
+
+      opacity: 0.48;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 24px;
+      right: 17px;
+
+      width: 30px;
+      height: 42px;
+
+      @include bg-img("../img/icon-cureency.svg");
+      background-size: cover;
+    }
+
+    &--trainer {
+      &::before {
+        content: "5000";
+      }
+    }
+
+    &--day {
+      &::before {
+        content: "1700";
+      }
+    }
+
+    &--full-day {
+      &::before {
+        content: "1700";
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 67px;
+    margin-left: auto;
+
+    @include button(206px);
+    padding-top: 25px;
+    padding-right: 42px;
+    padding-bottom: 23px;
+    padding-left: 43px;
+
+    color: $text-content;
+    border: 2px solid $text-content;
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      padding-top: 27px;
+      padding-bottom: 25px;
+
+      border: none;
+
+      background: $lin-grad-btn-hover;
+      color: $text-main;
+    }
+
+    &:active {
+      background: $btn-bg-active;
+    }
+  }
+}
+
+@media (max-width: $table-width) {
+  .tickets {
+    justify-content: center;
+
+    padding-right: 21.22%;
+    padding-bottom: 60px;
+    padding-left: 21.22%;
+
+    &__item {
+      width: 100%;
+      margin-right: 0;
+
+      &::after {
+        width: calc(100% - 14px);
+      }
+    }
+
+    &__price {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 17px;
+
+      &::before {
+        top: -24px;
+        left: -1px;
+      }
+
+      &::after {
+        right: 18px;
+      }
+    }
+
+    &__button {
+      width: 208px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .tickets {
+    padding-right: 4.69%;
+    padding-bottom: 35px;
+    padding-left: 4.69%;
+
+    &__item {
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      margin-bottom: 11px;
+      padding-top: 52px;
+
+      font-size: 22px;
+    }
+
+    &__description {
+      margin-bottom: 46px;
+    }
+
+    &__price {
+      margin-right: auto;
+      margin-bottom: 21px;
+      margin-left: auto;
+      padding-right: 27px;
+      padding-left: 21px;
+
+      font-size: 48px;
+
+      &::before {
+        top: -20px;
+        left: 4px;
+
+        font-size: 80px;
+      }
+
+      &::after {
+        top: 29px;
+        right: 18px;
+
+        width: 24px;
+        height: 33px;
+      }
+    }
+
+    &__button {
+      margin-bottom: 54px;
+    }
+  }
+}
