@@ -42,7 +42,7 @@
     color: $text-main;
   }
 
-  &__link {
+  &__button {
     display: inline-block;
     margin-bottom: 85px;
     margin-left: -2px;
@@ -50,6 +50,17 @@
     @include button(347px);
     padding-top: 26px;
     padding-bottom: 23px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background: $lin-grad-btn-hover;
+    }
+
+    &:active {
+      background: $btn-bg-active;
+      border-color: $btn-border-active;
+    }
   }
 }
 
@@ -84,7 +95,7 @@
       line-height: 18px;
     }
 
-    &__link {
+    &__button {
       width: 204px;
       margin-bottom: 50px;
       margin-left: -1px;
