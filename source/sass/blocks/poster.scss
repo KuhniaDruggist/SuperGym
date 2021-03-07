@@ -1,0 +1,119 @@
+.poster {
+  box-sizing: border-box;
+
+  @include container(1160px, 78px);
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  background-color: $bg-super-games;
+
+  @include bg-img("../img/background-sg-desctop@1x.jpg");
+  background-position: top 0 right 0;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-sg-desctop@2x.jpg");
+    background-size: 600px auto;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__title {
+    max-width: 201px;
+
+    @include pm-zero();
+    margin-right: 47px;
+    padding-top: 77px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(90px, 700, 90px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-main;
+  }
+
+  &__description {
+    @include pm-zero();
+    margin-bottom: 45px;
+
+    @include font(18px, 400, 27px);
+    color: $text-main;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 85px;
+    margin-left: -2px;
+
+    @include button(347px);
+    padding-top: 26px;
+    padding-bottom: 23px;
+  }
+}
+
+@media (max-width: $table-width) {
+  .poster {
+    @include container(100%, 45px);
+    margin-top: 100px;
+    margin-right: 45px;
+    margin-left: 45px;
+
+    @include bg-img("../img/background-sg-tablet@1x.jpg");
+    background-position: top 0 right 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-sg-tablet@2x.jpg");
+      background-size: 386px auto;
+    }
+
+    &__title {
+      max-width: 117px;
+      margin-right: 27px;
+      padding-top: 46px;
+
+      font-size: 52px;
+      line-height: 52px;
+    }
+
+    &__description {
+      margin-bottom: 29px;
+
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__link {
+      width: 204px;
+      margin-bottom: 50px;
+      margin-left: -1px;
+      padding-top: 13px;
+      padding-bottom: 12px;
+      padding-left: 51px;
+
+      font-size: 10px;
+      line-height: 12px;
+
+      border-width: 2px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .poster {
+    margin-top: 70px;
+    margin-right: 15px;
+    margin-bottom: 100px; //временно
+    margin-left: 15px;
+    padding-bottom: 292px;
+
+    @include bg-img("../img/background-sg-mobile@1x.jpg");
+    background-position: bottom 0 right 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-sg-mobile@2x.jpg");
+      background-size: 290px auto;
+    }
+  }
+}
