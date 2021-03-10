@@ -1,0 +1,49 @@
+.trainers {
+  &__title {
+    max-width: 1160px;
+
+    @include pm-zero();
+    margin-right: auto;
+    margin-bottom: 55px;
+    margin-left: auto;
+    padding-top: 115px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(49px, 700, 49px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-content;
+  }
+}
+
+@media (max-width: $table-width) {
+  .trainers {
+    &__title {
+      min-width: 129px;
+      margin-bottom: 45px;
+      padding-top: 95px;
+      padding-right: 45px;
+      padding-left: 45px;
+
+      font-size: 42px;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .trainers {
+    &__title {
+      min-width: 99px;
+      margin-bottom: 45px;
+      padding-top: 22px;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}
