@@ -46,7 +46,7 @@
     &:hover,
     &:focus-within {
       outline: none;
-      background: $lin-grad-btn-hover;
+      background: $bg-gradient;
     }
 
     &:hover::after,

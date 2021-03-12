@@ -4,7 +4,7 @@
   @include container(1160px, 78px);
   margin-top: 120px;
 
-  background-color: $bg-super-games;
+  background-color: $bg-contrast;
 
   @include bg-img("../img/background-sg-desktop@1x.jpg");
   background-position: top 0 right 0;
