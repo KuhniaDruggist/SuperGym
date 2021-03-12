@@ -112,6 +112,10 @@
 
 @media (max-width: $mobile-width) {
   .poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin-top: 70px;
     margin-right: 15px;
     margin-bottom: 45px;
@@ -119,11 +123,15 @@
     padding-bottom: 292px;
 
     @include bg-img("../img/background-sg-mobile@1x.jpg");
-    background-position: bottom 0 right 0;
+    background-position: bottom 0 right 50%;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/background-sg-mobile@2x.jpg");
       background-size: 290px auto;
+    }
+
+    &__description {
+      width: 204px;
     }
   }
 }
