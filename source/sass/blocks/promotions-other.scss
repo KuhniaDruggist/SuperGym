@@ -1,0 +1,159 @@
+.promotions-other {
+  &__item {
+    position: relative;
+
+    margin-bottom: 40px;
+
+    background: $bg-gradient;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: 7px;
+
+      width: calc(100% - 14px);
+      min-height: calc(100% - 14px);
+
+      background-color: $bg-ticket;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    @include pm-zero();
+    margin-right: 35px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    padding-top: 31px;
+
+    @include font(26px, 700, 26px);
+    color: $text-promotion;
+  }
+
+  &__description {
+    position: relative;
+    z-index: 1;
+
+    @include pm-zero();
+    margin-right: 35px;
+    margin-bottom: 67px;
+    margin-left: 35px;
+
+    font-weight: 400;
+    color: $text-promotion;
+  }
+
+  &__link {
+    display: inline-block;
+
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 35px;
+    margin-left: 35px;
+
+    @include font(12px, 700, 14px);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $text-promotion;
+
+    border-bottom: 1px solid $text-promotion;
+  }
+}
+
+@media (max-width: $only-dekstop) {
+  .promotions-other {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: $table-width) {
+  .promotions-other {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    &__item {
+      width: calc(50% - 15px);
+
+      &:nth-child(2n) {
+        margin-left: 15px;
+      }
+
+      &:nth-child(2n - 1) {
+        margin-right: 15px;
+      }
+    }
+
+    &__description {
+      min-height: 44px;
+      margin-bottom: 45px;
+
+      &--mount {
+        margin-right: 65px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promotions-other {
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+
+      &:nth-child(2n - 1) {
+        margin-right: 0;
+      }
+    }
+
+    &__title {
+      margin-right: auto;
+      margin-bottom: 11px;
+      margin-left: auto;
+      padding-right: 15px;
+      padding-top: 42px;
+      padding-left: 15px;
+
+      text-align: center;
+    }
+
+    &__description {
+      margin-right: auto;
+      margin-bottom: 27px;
+      margin-left: auto;
+      padding-right: 65px;
+      padding-left: 65px;
+
+      text-align: center;
+
+      &--mount {
+        padding-right: 68px;
+        padding-left: 69px;
+      }
+    }
+
+    &__link {
+      margin-right: auto;
+      margin-bottom: 46px;
+      margin-left: auto;
+
+      text-align: center;
+    }
+  }
+}
+
