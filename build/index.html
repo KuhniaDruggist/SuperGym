@@ -454,6 +454,50 @@
         </p>
       </div>
     </section>
+
+    <section class="feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <div class="feedback__free-lesson free-lesson">
+        <div class="free-lesson__wrapper">
+          <h3 class="free-lesson__title">Бесплатное занятие</h3>
+          <form class="free-lesson__form form" action="https://echo.htmlacademy.ru" method="post">
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label visually-hidden" for="name-field">Имя</label>
+                <input class="form__field" id="name-field" type="text" name="name" placeholder="Имя" autocomplete="off" required="">
+              </li>
+              <li class="form__item">
+                <label class="form__label visually-hidden" for="phone-field">Телефон</label>
+                <input class="form__field" id="phone-field" type="tel" name="phone" placeholder="Телефон" maxlength="17" autocomplete="off" required="">
+              </li>
+            </ul>
+            <button type="submit" class="button form__button">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="feedback__communications communications">
+        <h3 class="communications__title">Контакты</h3>
+        <ul class="communications__list">
+          <li class="communications__item communications__item--adress">
+            <p class="communications__label">Адрес:</p>
+            <a class="communications__info communications__info--link" href="#">г. Омск, ул. 60 лет Октября, 7</a>
+          </li>
+          <li class="communications__item communications__item--tel">
+            <p class="communications__label">Телефон:</p>
+            <a class="communications__info communications__info--link" href="tel:88005555555">8-800-555-55-55</a>
+          </li>
+          <li class="communications__item communications__item--schedule">
+            <p class="communications__label">График работы:</p>
+            <p class="communications__info communications__info--schedule">Пн-Вс: с 8:00 до 22:00</p>
+          </li>
+          <li class="communications__item communications__item--email">
+            <p class="communications__label">Email:</p>
+            <a class="communications__info communications__info--link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 </body>
 </html>
