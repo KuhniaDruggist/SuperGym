@@ -1,0 +1,47 @@
+.reviews {
+  &__title {
+    @include pm-zero();
+    margin-right: auto;
+    margin-bottom: 55px;
+    margin-left: auto;
+    padding-top: 45px;
+    padding-right: 103px;
+    padding-left: 103px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(49px, 700, 49px);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $text-content;
+  }
+}
+
+@media (max-width: $table-width) {
+  .reviews {
+    &__title {
+      margin-bottom: 45px;
+      padding-top: 25px;
+      padding-right: 45px;
+      padding-left: 45px;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .reviews {
+    &__title {
+      margin-bottom: 46px;
+      padding-top: 6px;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}
