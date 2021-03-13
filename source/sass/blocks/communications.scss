@@ -1,0 +1,170 @@
+.communications {
+  width: 50%;
+
+  border-top: 1px solid $line-feedback;
+
+  &__title {
+    @include pm-zero();
+    margin-bottom: 45px;
+    padding-top: 65px;
+    padding-right: 103px;
+    padding-left: 120px;
+
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @include font(49px, 700, 49px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-content;
+  }
+
+  &__list {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    max-width: 460px;
+
+    @include pm-zero();
+    margin-left: 124px;
+    list-style: none;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      left: 50%;
+
+      width: 1px;
+      height: calc(100% - 29px);
+
+      background-color: $line-feedback;
+    }
+  }
+
+  &__item {
+    width: 170px;
+    margin-bottom: 18px;
+  }
+
+  &__label {
+    @include pm-zero();
+    margin-bottom: 2px;
+
+    @include font(16px, 700, 24px);
+    color: $text-content;
+  }
+
+  &__info {
+    display: inline-block;
+
+    @include font(14px, 400, 21px);
+    color: $text-content;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &--schedule {
+      margin: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: $table-width) {
+  .communications {
+    width: 100%;
+
+    &__title {
+      margin-bottom: 36px;
+      padding-right: 133px;
+      padding-left: 133px;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    &__list {
+      max-width: 532px;
+      margin-left: 133px;
+
+      &::before {
+        top: 8px;
+
+        height: calc(100% - 35px);
+      }
+    }
+
+    &__item {
+      min-width: 218px;
+    }
+
+    &__label {
+      margin-bottom: 7px;
+
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__info {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .communications {
+    &__title {
+      margin-bottom: 37px;
+      padding-top: 66px;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    &__list {
+      flex-direction: column;
+
+      margin-right: 15px;
+      margin-left: 15px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__item {
+      &--adress {
+        order: 1;
+      }
+
+      &--tel {
+        order: 3;
+      }
+
+      &--schedule {
+        order: 2;
+      }
+
+      &--email {
+        order: 4;
+      }
+    }
+  }
+}
