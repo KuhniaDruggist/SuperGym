@@ -113,7 +113,7 @@
       </div>
     </section>
 
-    <section class="season-tickets">
+    <section class="season-tickets" id="season-tickets">
       <h2 class="season-tickets__title">Абонементы</h2>
       <ul class="season-tickets__mounts mounts">
         <li class="mounts__item">
@@ -180,7 +180,7 @@
       </div>
     </section>
 
-    <section class="trainers">
+    <section class="trainers" id="trainers">
       <h2 class="trainers__title">Тренеры</h2>
       <div class="trainers__slider slider only-js">
         <ul class="slider__list">
@@ -407,7 +407,7 @@
       </div>
     </section>
 
-    <section class="promotions">
+    <section class="promotions" id="promotions">
       <h2 class="promotions__title">Акции</h2>
       <div class="promotions__wrapper">
         <ul class="promotions__list promotions-main">
@@ -499,5 +499,58 @@
       </div>
     </section>
   </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <nav class="page-footer__nav nav">
+        <a class="nav__logo">
+          <img src="img/icon-logo.svg" width="87" height="20" alt="Логотип фитнес-центра supergym">
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item nav__item--services">
+            <a class="nav__link" href="#">Услуги</a>
+          </li>
+          <li class="nav__item nav__item--season-tickets">
+            <a class="nav__link" href="#season-tickets">Абонементы</a>
+          </li>
+          <li class="nav__item nav__item--promotions">
+            <a class="nav__link" href="#promotions">Акции</a>
+          </li>
+          <li class="nav__item nav__item--trainers">
+            <a class="nav__link" href="#trainers">Тренеры</a>
+          </li>
+          <li class="nav__item nav__item--schedule">
+            <a class="nav__link" href="#">Расписание</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="page-footer__social social-footer">
+        <li class="social-footer__item social-footer__item--vk">
+          <a class="social-footer__link social-footer__link--vk" href="#">
+            <svg width="24" height="13" fill="none">
+              <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+            </svg>
+            <span class="visually-hidden">Мы во Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-footer__item social-footer__item--insta">
+          <a class="social-footer__link social-footer__link--insta" href="#">
+            <svg width="24" height="24" fill="none">
+              <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Инстаграме</span>
+          </a>
+        </li>
+        <li class="social-footer__item social-footer__item--fb">
+          <a class="social-footer__link social-footer__link--fb" href="#">
+            <svg width="12" height="24">
+              <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
