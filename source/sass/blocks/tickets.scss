@@ -37,7 +37,7 @@
       left: 7px;
       z-index: -2;
 
-      width: 346px;
+      width: calc(100% - 14px);
       min-height: calc(100% - 14px);
 
       background-color: $bg-ticket;

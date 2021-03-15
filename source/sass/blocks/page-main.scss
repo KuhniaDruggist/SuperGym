@@ -24,6 +24,8 @@
   }
 
   &__button {
+    display: inline-block;
+
     @include button();
     cursor: pointer;
     margin-bottom: 94px;
@@ -31,6 +33,7 @@
 
     &:hover,
     &:focus {
+      outline: none;
       background: $lin-grad-btn-hover;
     }
 
