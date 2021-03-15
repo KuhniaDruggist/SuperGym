@@ -1,0 +1,118 @@
+.nav {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  max-width: 794px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include pm-zero();
+    margin-top: -2px;
+    margin-left: auto;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 42px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__link {
+    display: inline-block;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: $table-width) {
+  .nav {
+    min-width: 533px;
+    margin-top: 42px;
+    margin-bottom: 40px;
+
+    &__logo img {
+      width: 80px;
+      height: 18px;
+    }
+
+    &__item {
+      margin-left: 32px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .nav {
+    position: relative;
+
+    min-width: 100%;
+    margin-bottom: 25px;
+
+    &__logo {
+      position: absolute;
+      top: 8px;
+    }
+
+    &__logo img {
+      width: 67px;
+      height: 15px;
+    }
+
+    &__list {
+      justify-content: space-between;
+
+      width: 100%;
+      max-width: 387px;
+      margin-left: 0;
+    }
+
+    &__item {
+      width: 130px;
+      margin-left: 0;
+
+      @include font(16px, 400, 19px);
+
+      &--services {
+        order: 2;
+      }
+
+      &--season-tickets {
+        order: 4;
+      }
+
+      &--promotions {
+        margin-left: auto;
+        padding-left: 160px;
+
+        order: 1;
+      }
+
+      &--trainers {
+        order: 3;
+      }
+
+      &--schedule {
+        order: 5;
+      }
+    }
+  }
+}
