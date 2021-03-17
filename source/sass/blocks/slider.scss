@@ -23,15 +23,18 @@
 
 .only-js .slider {
   max-width: 1160px;
+  
   overflow: hidden;
 }
 
 .only-js .slider__list {
-  @include pm-zero();
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+
+  @include pm-zero();
   min-height: 294px;
+
   list-style: none;
 }
 
