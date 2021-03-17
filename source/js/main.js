@@ -47,6 +47,8 @@
   }
 })();
 
+// Слайдер отзывов
+
 (function () {
   var sectionReviews = document.querySelector('.reviews');
   var sliderReviews = sectionReviews.querySelector('.reviews-slider');
@@ -68,4 +70,19 @@
       },
     });
   }
+})();
+
+// Маска телефона
+
+(function () {
+  var userPhoneInput = document.querySelector('input[type="tel"]');
+
+  if (userPhoneInput) {
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+
+    window.mask = new window.IMask(userPhoneInput, maskOptions);
+  }
+
 })();
