@@ -107,6 +107,11 @@
   }
 }
 
+.only-js .trainer {
+  margin: 0;
+  flex-shrink: 0;
+}
+
 @media (max-width: $table-width) {
   .trainer {
     width: 268px;

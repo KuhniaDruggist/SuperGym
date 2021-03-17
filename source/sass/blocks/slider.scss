@@ -7,8 +7,6 @@
   margin-left: auto;
 
   &__list {
-    position: relative;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,111 +19,57 @@
 
     list-style: none;
   }
-
-  &__button {
-    display: none;
-
-    position: absolute;
-
-    width: 16px;
-    height: 32px;
-
-    @include pm-zero();
-    border: none;
-    background: none;
-
-    cursor: pointer;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 100%;
-    }
-
-    &--prev {
-      top: calc(50% - 16px);
-      left: 46px;
-
-      &::before {
-        @include bg-img("../img/icon-arrow-left.svg");
-        background-size: cover;
-      }
-    }
-
-    &--next {
-      top: calc(50% - 16px);
-      right: 46px;
-
-      &::before {
-        @include bg-img("../img/icon-arrow-right.svg");
-        background-size: cover;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
-
-    &:active {
-      opacity: 0.2;
-    }
-  }
 }
 
-.only-js .slider__list {
-  height: 294px;
+.only-js .slider {
+  max-width: 1160px;
   overflow: hidden;
 }
 
-.only-js .slider__button {
-  display: block;
+.only-js .slider__list {
+  @include pm-zero();
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  min-height: 294px;
+  list-style: none;
+}
+
+@media (max-width: $only-desctop-slider) {
+  .only-js .slider {
+    width: 860px;
+  }
 }
 
 @media (max-width: $table-width) {
   .slider {
     min-width: 678px;
     margin-bottom: 100px;
+  }
 
-    &__button {
-      &--prev {
-        left: 44px;
-      }
-
-      &--next {
-        right: 45px;
-      }
-    }
+  .only-js .slider {
+    min-width: 566px;
+    max-width: 566px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .slider {
     min-width: 290px;
+    margin-bottom: 120px;
 
     &__list {
       padding-left: 32px;
       padding-right: 32px;
     }
+  }
 
-    &__button {
-      width: 10px;
-      height: 19px;
+  .only-js .slider {
+    min-width: 226px;
+    max-width: 226px;
+  }
 
-      &--prev {
-        top: calc(50% - 19px);
-        left: 14px;
-      }
-
-      &--next {
-        top: calc(50% - 19px);
-        right: 14px;
-      }
-    }
+  .only-js .slider__list {
+    min-height: 274px;
   }
 }
