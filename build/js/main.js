@@ -46,3 +46,26 @@
     });
   }
 })();
+
+(function () {
+  var sectionReviews = document.querySelector('.reviews');
+  var sliderReviews = sectionReviews.querySelector('.reviews-slider');
+
+  if (!sectionReviews.classList.contains('only-js')) {
+    sectionReviews.classList.add('only-js');
+  }
+
+  if (sliderReviews) {
+    sliderReviews = new window.Swiper(sliderReviews, {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      slideClass: 'reviews-slider__item',
+      wrapperClass: 'reviews-slider__list',
+      navigation: {
+        nextEl: '.reviews__button--next',
+        prevEl: '.reviews__button--prev',
+      },
+    });
+  }
+})();
