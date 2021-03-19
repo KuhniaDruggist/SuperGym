@@ -5,14 +5,12 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  max-width: 1200px;
+  min-width: 1200px;
 
   @include pm-zero();
   margin-right: auto;
   margin-left: auto;
-  padding-right: 6.07%;
   padding-bottom: 80px;
-  padding-left: 6.07%;
 
   list-style: none;
 
