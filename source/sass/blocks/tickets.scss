@@ -2,14 +2,17 @@
   position: relative;
 
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+
+  max-width: 1200px;
 
   @include pm-zero();
   margin-right: auto;
   margin-left: auto;
-  padding-right: 7.54%;
+  padding-right: 6.07%;
   padding-bottom: 80px;
-  padding-left: 7.54%;
+  padding-left: 6.07%;
 
   list-style: none;
 
@@ -19,12 +22,9 @@
 
     box-sizing: border-box;
     width: 360px;
-    margin-right: 40px;
+    margin-right: 20px;
     margin-bottom: 40px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin-left: 20px;
 
     background-color: $bg-ticket;
 
@@ -52,6 +52,10 @@
     &:hover::after,
     &:focus-within::after {
       display: block;
+    }
+
+    &--hide {
+      display: none;
     }
   }
 
@@ -141,7 +145,7 @@
 
     &--full-day {
       &::before {
-        content: "1700";
+        content: "2700";
       }
     }
   }
