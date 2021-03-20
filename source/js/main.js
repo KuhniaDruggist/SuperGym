@@ -117,9 +117,11 @@
 })();
 
 // Маска телефона
-
 (function () {
-  var userPhoneInput = document.querySelector('input[type="tel"]');
+  var MINLENGTH = 16;
+
+  var form = document.querySelector('.free-lesson__form');
+  var userPhoneInput = form.querySelector('input[type="tel"]');
 
   if (userPhoneInput) {
     var maskOptions = {
@@ -127,6 +129,12 @@
     };
 
     window.mask = new window.IMask(userPhoneInput, maskOptions);
+
+    form.addEventListener('submit', function (evt) {
+      if (userPhoneInput.value.length < MINLENGTH) {
+        evt.preventDefault();
+      }
+    });
   }
 
 })();
