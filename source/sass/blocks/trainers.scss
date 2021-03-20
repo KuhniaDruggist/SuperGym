@@ -108,6 +108,10 @@
       }
     }
   }
+
+  .only-js .trainers__wrapper {
+    max-width: 768px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -137,5 +141,9 @@
         right: 14px;
       }
     }
+  }
+
+  .only-js .trainers__wrapper {
+    max-width: 320px;
   }
 }
