@@ -1,12 +1,13 @@
 .promotions-main {
   &__item {
     width: 100%;
+    height: calc(100% - 40px);
     margin-bottom: 40px;
 
     background-color: $bg-contrast;
 
     @include bg-img("../img/background-promotion-desktop@1x.jpg");
-    background-position: top 0 right 0;
+    background-position: top 50% right 0;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/background-promotion-desktop@2x.jpg");
@@ -75,6 +76,7 @@
     width: 100%;
 
     &__item {
+      height: calc(100% - 30px);
       margin-bottom: 30px;
 
       @include bg-img("../img/background-promotion-tablet@1x.jpg");

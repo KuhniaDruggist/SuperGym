@@ -2,6 +2,7 @@
   &__item {
     position: relative;
 
+    max-width: 560px;
     margin-bottom: 40px;
 
     background: $bg-gradient;
@@ -78,6 +79,10 @@
 @media (max-width: $only-dekstop) {
   .promotions-other {
     flex-grow: 1;
+
+    &__item {
+      max-width: 100%;
+    }
   }
 }
 
