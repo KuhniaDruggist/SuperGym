@@ -28,6 +28,8 @@
     border-radius: 50%;
     background: $lin-grad-btn-play;
 
+    cursor: pointer;
+
     &::before {
       position: absolute;
       top: -14px;
