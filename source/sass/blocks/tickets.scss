@@ -5,7 +5,7 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  min-width: 1200px;
+  max-width: 1200px;
 
   @include pm-zero();
   margin-right: auto;
@@ -193,6 +193,7 @@
     &__item {
       width: 100%;
       margin-right: 0;
+      margin-left: 0;
 
       &::after {
         width: calc(100% - 14px);
