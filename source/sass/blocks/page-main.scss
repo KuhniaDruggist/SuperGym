@@ -1,4 +1,6 @@
 .page-main {
+  flex-grow: 1;
+
   &__background {
     background: $conic-gradient-desktop;
   }
