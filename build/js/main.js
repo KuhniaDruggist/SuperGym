@@ -1,5 +1,49 @@
 'use strict';
 
+// Табы абонементов
+
+(function () {
+  var sectionSeasonTickets = document.querySelector('.season-tickets');
+  var abonementList = document.querySelector('.season-tickets__list');
+
+  if (sectionSeasonTickets) {
+    var mountsTab = sectionSeasonTickets.querySelectorAll('.mounts__button');
+    var abonementElements = abonementList.querySelectorAll('.tickets__item');
+
+    var switchAbonements = function (data) {
+      abonementElements.forEach(function (card) {
+        if (parseInt(card.getAttribute('tickets-mounth'), 10) !== parseInt(data, 10)) {
+          card.classList.add('tickets__item--hide');
+        } else {
+          card.classList.remove('tickets__item--hide');
+        }
+      });
+    };
+    switchAbonements(1);
+
+    mountsTab.forEach(function (button, n) {
+      function onMountsBtnClick(evt) {
+        evt.preventDefault();
+        for (var i = 0; i < mountsTab.length; i++) {
+          mountsTab[i].classList.remove('mounts__button--active');
+        }
+        mountsTab[n].classList.add('mounts__button--active');
+        var tabMounth = parseInt(mountsTab[n].getAttribute('mounth'), 10);
+        abonementElements.forEach(function (card) {
+          var ticketMount = parseInt(card.getAttribute('tickets-mounth'), 10);
+          if (tabMounth === ticketMount) {
+            card.classList.remove('tickets__item--hide');
+          } else {
+            card.classList.add('tickets__item--hide');
+          }
+        });
+      }
+
+      button.addEventListener('click', onMountsBtnClick);
+    });
+  }
+})();
+
 // Слайдер тренеров
 
 (function () {
@@ -73,9 +117,11 @@
 })();
 
 // Маска телефона
-
 (function () {
-  var userPhoneInput = document.querySelector('input[type="tel"]');
+  var MINLENGTH = 16;
+
+  var form = document.querySelector('.free-lesson__form');
+  var userPhoneInput = form.querySelector('input[type="tel"]');
 
   if (userPhoneInput) {
     var maskOptions = {
@@ -83,6 +129,12 @@
     };
 
     window.mask = new window.IMask(userPhoneInput, maskOptions);
+
+    form.addEventListener('submit', function (evt) {
+      if (userPhoneInput.value.length < MINLENGTH) {
+        evt.preventDefault();
+      }
+    });
   }
 
 })();
