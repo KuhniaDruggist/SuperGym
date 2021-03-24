@@ -66,7 +66,7 @@
     padding-left: 45px;
 
     @include bg-img("../img/background-gym-tablet@1x.jpg");
-    background-position: top 326px left 50%;
+    background-position: bottom 150px left 50%;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/background-gym-tablet@2x.jpg");
@@ -118,7 +118,7 @@
     padding: 0;
 
     @include bg-img("../img/background-gym-mobile@1x.jpg");
-    background-position: top 335px left 50%;
+    background-position: bottom 274px left 50%;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/background-gym-mobile@2x.jpg");
