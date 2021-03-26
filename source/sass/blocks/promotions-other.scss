@@ -1,4 +1,6 @@
 .promotions-other {
+  flex-grow: 1;
+
   &__item {
     position: relative;
 
@@ -76,16 +78,6 @@
   }
 }
 
-@media (max-width: $only-dekstop) {
-  .promotions-other {
-    flex-grow: 1;
-
-    &__item {
-      max-width: 100%;
-    }
-  }
-}
-
 @media (max-width: $table-width) {
   .promotions-other {
     display: flex;
@@ -125,6 +117,7 @@
       flex-direction: column;
 
       width: 100%;
+      max-width: 737px;
       margin-bottom: 30px;
 
       &:nth-child(2n) {
