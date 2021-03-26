@@ -2,7 +2,6 @@
   position: relative;
 
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 
   max-width: 1200px;
@@ -97,24 +96,6 @@
     @include font(60px, 700, 90px);
     color: $text-price;
 
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: -24px;
-      left: -18px;
-      z-index: -1;
-
-      width: 192px;
-      height: 73px;
-
-      font-size: 100px;
-      font-weight: 700;
-      color: $text-price-shadow;
-
-      opacity: 0.48;
-    }
-
     &::after {
       content: "";
 
@@ -128,24 +109,19 @@
       @include bg-img("../img/icon-cureency.svg");
       background-size: cover;
     }
+  }
 
-    &--trainer {
-      &::before {
-        content: "5000";
-      }
-    }
+  &__price-shadow {
+    position: absolute;
+    top: -24px;
+    left: -18px;
+    z-index: -1;
 
-    &--day {
-      &::before {
-        content: "1700";
-      }
-    }
+    font-size: 100px;
+    font-weight: 700;
+    color: $text-price-shadow;
 
-    &--full-day {
-      &::before {
-        content: "2700";
-      }
-    }
+    opacity: 0.48;
   }
 
   &__button {
@@ -186,12 +162,12 @@
   .tickets {
     justify-content: center;
 
-    padding-right: 21.22%;
+    margin-right: 21.22%;
     padding-bottom: 60px;
-    padding-left: 21.22%;
+    margin-left: 21.22%;
 
     &__item {
-      width: 100%;
+      min-width: 100%;
       margin-right: 0;
       margin-left: 0;
 
@@ -205,14 +181,14 @@
       margin-left: auto;
       padding-left: 17px;
 
-      &::before {
-        top: -24px;
-        left: -1px;
-      }
-
       &::after {
         right: 18px;
       }
+    }
+
+    &__price-shadow {
+      top: -24px;
+      left: -1px;
     }
 
     &__button {
@@ -251,13 +227,6 @@
 
       font-size: 48px;
 
-      &::before {
-        top: -20px;
-        left: 4px;
-
-        font-size: 80px;
-      }
-
       &::after {
         top: 29px;
         right: 18px;
@@ -265,6 +234,13 @@
         width: 24px;
         height: 33px;
       }
+    }
+
+    &__price-shadow {
+      top: -20px;
+      left: 4px;
+
+      font-size: 80px;
     }
 
     &__button {
