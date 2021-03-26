@@ -128,5 +128,27 @@
 @media (max-width: $mobile-width) {
   .trainer {
     width: 226px;
+
+    &__link {
+      &:hover .trainer__name,
+      &:focus .trainer__name {
+        bottom: 208px;
+      }
+    }
+
+    &__direction {
+      margin-bottom: 33px;
+      padding-top: 67px;
+    }
+
+    &__features {
+      @include pm-zero;
+      padding-right: 34px;
+      padding-left: 34px;
+    }
+
+    &__feature {
+      padding-bottom: 13px;
+    }
   }
 }
