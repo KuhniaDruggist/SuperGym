@@ -8,10 +8,14 @@
 
   if (sectionSeasonTickets) {
     var mountsTab = sectionSeasonTickets.querySelectorAll('.mounts__button');
-    var abonementElements = abonementList.querySelectorAll('.tickets__item');
+
+    var getAbonementElements = function () {
+      var abonementElements = abonementList.querySelectorAll('.tickets__item');
+      return abonementElements;
+    };
 
     var switchAbonements = function (data) {
-      abonementElements.forEach(function (card) {
+      getAbonementElements().forEach(function (card) {
         if (parseInt(card.getAttribute('tickets-mounth'), 10) !== parseInt(data, 10)) {
           card.classList.add('tickets__item--hide');
         } else {
@@ -29,7 +33,7 @@
         }
         mountsTab[n].classList.add('mounts__button--active');
         var tabMounth = parseInt(mountsTab[n].getAttribute('mounth'), 10);
-        abonementElements.forEach(function (card) {
+        getAbonementElements().forEach(function (card) {
           var ticketMount = parseInt(card.getAttribute('tickets-mounth'), 10);
           if (tabMounth === ticketMount) {
             card.classList.remove('tickets__item--hide');
