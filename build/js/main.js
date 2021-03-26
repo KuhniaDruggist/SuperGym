@@ -122,23 +122,28 @@
 
 // Маска телефона
 (function () {
-  var MINLENGTH = 16;
+  var ONLY_NUMBERS_PHONE = 11;
 
   var form = document.querySelector('.free-lesson__form');
   var userPhoneInput = form.querySelector('input[type="tel"]');
 
   if (userPhoneInput) {
     var maskOptions = {
-      mask: '+{7}(000)000-00-00'
+      mask: '+{7}(000)000-00-00',
+      message: 'Недостаточно символов. Введите номер целиком.'
     };
 
-    window.mask = new window.IMask(userPhoneInput, maskOptions);
+    var myMask = new window.IMask(userPhoneInput, maskOptions);
 
-    form.addEventListener('submit', function (evt) {
-      if (userPhoneInput.value.length < MINLENGTH) {
-        evt.preventDefault();
+    var displayMessage = function () {
+      if (myMask.unmaskedValue.length < ONLY_NUMBERS_PHONE) {
+        userPhoneInput.setCustomValidity(maskOptions.message);
+      } else {
+        userPhoneInput.setCustomValidity('');
       }
-    });
+    };
+
+    myMask.on('accept', displayMessage);
   }
 
 })();
