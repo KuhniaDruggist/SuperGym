@@ -117,7 +117,7 @@
 @media (max-width: $mobile-width) {
   .video-box {
     width: 100%;
-    margin-bottom: 3px;
+    margin-bottom: 34px;
     margin-left: 0;
 
     &__video {
@@ -125,6 +125,7 @@
       height: auto;
 
       @include bg-img("../img/preview-video-mobile@1x.jpg");
+      background-position: 0 50%;
       background-size: 100% auto;
 
       @media (min-resolution: $retina-dppx) {
@@ -133,6 +134,7 @@
     }
 
     &__button {
+      top: calc(50% - 29px);
       left: calc(50% - 25px);
     }
   }
